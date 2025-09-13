@@ -15,15 +15,12 @@ import NotFound from "./pages/NotFound";
 const queryClient = new QueryClient();
 
 const App = () => {
-  // Use /urbannest/ for production (GitHub Pages), empty string for development
-  const basename = import.meta.env.PROD ? '/urbannest/' : '/';
-  
   return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <BrowserRouter basename={basename}>
+        <BrowserRouter basename="/urbannest/">
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/search" element={<SearchResults />} />
