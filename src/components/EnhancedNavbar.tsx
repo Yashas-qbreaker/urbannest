@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, MapPin, Home, User, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -37,9 +38,9 @@ const EnhancedNavbar = () => {
           {/* Navigation Links - Balanced */}
           <div className="hidden lg:flex items-center space-x-1">
             {navigationItems.map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.href}
                 className="group relative px-4 py-2 text-sm font-medium text-text-secondary hover:text-text-primary transition-all duration-300 rounded-lg hover:bg-gradient-to-r hover:from-coral/10 hover:to-indigo/10 hover:scale-105"
               >
                 {item.label}
@@ -49,25 +50,25 @@ const EnhancedNavbar = () => {
                   </div>
                   <div className="w-2 h-2 bg-gradient-to-r from-coral to-indigo transform rotate-45 absolute -top-1 left-1/2 -translate-x-1/2"></div>
                 </div>
-              </a>
+              </Link>
             ))}
             
             {/* Insights with NEW badge - Balanced */}
-            <a
-              href="/insights"
+            <Link
+              to="/insights"
               className="group relative px-4 py-2 text-sm font-medium text-text-secondary hover:text-text-primary transition-all duration-300 rounded-lg hover:bg-gradient-to-r hover:from-purple/10 hover:to-rose/10 hover:scale-105 flex items-center space-x-1"
             >
               <span>Insights</span>
               <Badge className="bg-gradient-to-r from-purple-600 to-rose-600 text-text-white text-xs px-1.5 py-0.5 shadow-purple animate-pulse">
                 NEW
               </Badge>
-            </a>
+            </Link>
           </div>
 
           {/* Right Section - Balanced */}
           <div className="flex items-center space-x-3">
             {/* Post Property Button - Balanced */}
-            <a href="/list-property">
+            <Link to="/list-property">
               <Button 
                 variant="outline" 
                 size="sm" 
@@ -78,7 +79,7 @@ const EnhancedNavbar = () => {
                   FREE
                 </Badge>
               </Button>
-            </a>
+            </Link>
 
             {/* Language Toggle - Balanced */}
             <Button variant="ghost" size="sm" className="w-9 h-9 rounded-full p-0 hover:bg-gradient-to-r hover:from-indigo/10 hover:to-purple/10 transition-all duration-300">
@@ -90,11 +91,11 @@ const EnhancedNavbar = () => {
               <Button variant="ghost" size="sm" className="w-8 h-8 rounded-full p-0 hover:bg-gradient-to-r hover:from-coral/10 hover:to-indigo/10 transition-all duration-300">
                 <span className="text-text-secondary text-sm">☰</span>
               </Button>
-              <a href="/profile">
+              <Link to="/profile">
                 <div className="w-8 h-8 bg-gradient-to-r from-coral to-rose-600 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-coral group">
                   <User className="w-4 h-4 text-text-white group-hover:rotate-12 transition-transform duration-300" />
                 </div>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -103,21 +104,21 @@ const EnhancedNavbar = () => {
         <div className="lg:hidden border-t border-border mt-2 pt-2 pb-2">
           <div className="flex flex-wrap gap-2">
             {navigationItems.slice(0, 2).map((item) => (
-              <a
+              <Link
                 key={item.label}
-                href={item.href}
+                to={item.href}
                 className="px-3 py-1 text-sm text-text-secondary hover:text-text-primary bg-surface-soft rounded-full transition-all"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
-            <a
-              href="/insights"
+            <Link
+              to="/insights"
               className="flex items-center space-x-1 px-3 py-1 text-sm text-text-secondary hover:text-text-primary bg-surface-soft rounded-full transition-all"
             >
               <span>Insights</span>
               <Badge className="bg-success text-text-white text-xs px-1 py-0">NEW</Badge>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

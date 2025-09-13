@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Heart, Star, MapPin, Bed, Bath, Verified } from 'lucide-react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -24,7 +25,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
   const [isFavorited, setIsFavorited] = React.useState(false);
 
   return (
-    <a href={`/property/${property.id}`} className="block group">
+    <Link to={`/property/${property.id}`} className="block group">
       <Card className="cursor-pointer bg-background/80 backdrop-blur-xl border-0 shadow-soft hover:shadow-glow transition-all duration-500 overflow-hidden rounded-2xl group-hover:scale-105 group-hover:-translate-y-2">
         <div className="relative overflow-hidden">
           <img
@@ -115,7 +116,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
           </div>
         </CardContent>
       </Card>
-    </a>
+    </Link>
   );
 };
 

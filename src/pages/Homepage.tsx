@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate, Link } from 'react-router-dom';
 import { Search, Home, MessageCircle, User, Plus } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -11,6 +12,7 @@ import FloatingChatbot from '@/components/FloatingChatbot';
 import EnhancedNavbar from '@/components/EnhancedNavbar';
 
 const Homepage = () => {
+  const navigate = useNavigate();
   // Mock featured properties
   const featuredProperties = [
     {
@@ -231,13 +233,13 @@ const Homepage = () => {
             </div>
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 animate-scale-in">
               <Button variant="outline" className="w-full sm:w-auto text-text-primary border-2 border-border hover:border-coral hover:bg-coral/5 shadow-soft hover:shadow-medium transition-all duration-300 px-6 py-2">
-                <a href="/search" className="block w-full font-semibold">View All Properties</a>
+                <Link to="/search" className="block w-full font-semibold">View All Properties</Link>
               </Button>
-              <a href="/list-property" className="w-full sm:w-auto">
+              <Link to="/list-property" className="w-full sm:w-auto">
                 <Button className="w-full sm:w-auto bg-gradient-to-r from-coral to-rose-600 text-text-white shadow-coral hover:shadow-glow transform hover:scale-105 transition-all duration-300 px-6 py-2 font-semibold">
                   Post Property
                 </Button>
-              </a>
+              </Link>
             </div>
           </div>
           
@@ -264,7 +266,7 @@ const Homepage = () => {
                   <button
                     key={search}
                     onClick={() => {
-                      window.location.href = `/search?location=${encodeURIComponent(search)}`;
+                      navigate(`/search?location=${encodeURIComponent(search)}`);
                     }}
                     className="group px-4 py-2 bg-background border border-border rounded-full text-text-secondary hover:text-text-primary hover:border-coral transition-all text-sm cursor-pointer shadow-soft hover:shadow-medium transform hover:scale-105"
                   >
@@ -308,20 +310,20 @@ const Homepage = () => {
           </div>
           
           <div className="flex flex-col sm:flex-row gap-6 justify-center animate-scale-in mb-12">
-            <a href="/list-property">
+            <Link to="/list-property">
               <Button 
                 size="lg" 
                 className="min-w-[200px] bg-gradient-to-r from-coral to-rose-600 text-text-white shadow-coral hover:shadow-glow transform hover:scale-105 transition-all duration-500 px-6 py-3 text-base font-semibold rounded-xl"
               >
                 List Your Property
               </Button>
-            </a>
+              </Link>
             <Button 
               variant="outline" 
               size="lg" 
               className="min-w-[200px] border-2 border-text-primary/30 hover:border-coral hover:bg-coral/5 shadow-soft hover:shadow-medium transition-all duration-500 px-6 py-3 text-base font-semibold rounded-xl"
             >
-              <a href="/insights" className="block w-full">Learn More</a>
+              <Link to="/insights" className="block w-full">Learn More</Link>
             </Button>
           </div>
           

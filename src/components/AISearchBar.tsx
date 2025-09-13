@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Search, Calendar, Users, MapPin, Home, Building2, Briefcase, TreePine, ChevronDown, Filter, Clock, Bed } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
@@ -7,6 +8,7 @@ import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover
 import { format } from 'date-fns';
 
 const AISearchBar = () => {
+  const navigate = useNavigate();
   const [activeField, setActiveField] = useState<string | null>(null);
   const [activeTab, setActiveTab] = useState('rent');
   const [showFilters, setShowFilters] = useState(false);
@@ -96,7 +98,7 @@ const AISearchBar = () => {
       if (searchData.guests) queryParams.set('guests', searchData.guests.toString());
     }
     
-    window.location.href = `/search?${queryParams.toString()}`;
+    navigate(`/search?${queryParams.toString()}`);
   };
 
   const handleLocationSelect = (location: string) => {
