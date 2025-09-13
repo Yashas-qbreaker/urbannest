@@ -76,7 +76,7 @@ const Homepage = () => {
         <div className="relative z-10 text-center max-w-5xl mx-auto px-4 sm:px-6 w-full">
           <div className="animate-fade-in">
             {/* Main heading with balanced typography */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-text-white mb-4 leading-tight tracking-tight">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-text-white mb-4 leading-tight tracking-tight">
               <span className="block">Find Your</span>
               <span className="block bg-gradient-to-r from-coral via-rose-500 to-purple-600 bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_200%]">
                 Perfect Home
@@ -84,7 +84,7 @@ const Homepage = () => {
             </h1>
             
             {/* Balanced subtitle */}
-            <p className="text-lg md:text-xl text-text-white/95 mb-8 max-w-2xl mx-auto leading-relaxed font-light tracking-wide">
+            <p className="text-sm md:text-base text-text-white/95 mb-8 max-w-2xl mx-auto leading-relaxed font-light tracking-wide">
               Discover <span className="font-semibold text-coral">AI-powered</span> rental listings with 
               <span className="font-semibold text-indigo"> verified properties</span>, 
               smart matching, and advanced fraud protection technology.
@@ -133,13 +133,13 @@ const Homepage = () => {
             <div className="inline-block px-3 py-1.5 bg-coral/10 rounded-full text-coral font-semibold text-sm mb-3 animate-fade-in">
               ✨ Why Choose RentAI?
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4 leading-tight">
+            <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 leading-tight">
               The Future of
               <span className="block bg-gradient-to-r from-coral via-indigo to-purple-600 bg-clip-text text-transparent">
                 Rental Search
               </span>
             </h2>
-            <p className="text-text-secondary text-lg max-w-2xl mx-auto leading-relaxed font-light">
+            <p className="text-text-secondary text-base max-w-2xl mx-auto leading-relaxed font-light">
               Experience the next generation of rental search with AI-powered insights, 
               verified listings, and intelligent matching technology.
             </p>
@@ -148,13 +148,13 @@ const Homepage = () => {
           <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
             {/* Feature 1 */}
             <div className="group relative">
-              <Card className="text-center p-6 hover:shadow-glow transition-all duration-700 border-0 bg-background/60 backdrop-blur-xl hover:scale-105 hover:-translate-y-2">
+              <Card className="text-center p-4 hover:shadow-glow transition-all duration-700 border-0 bg-background/60 backdrop-blur-xl hover:scale-105 hover:-translate-y-2">
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo/5 to-purple/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardContent className="pt-4 relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-br from-indigo to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-indigo">
-                    <Search className="w-8 h-8 text-text-white" />
+                <CardContent className="pt-2 relative z-10">
+                  <div className="w-12 h-12 bg-gradient-to-br from-indigo to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-indigo">
+                    <Search className="w-6 h-6 text-text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-text-primary mb-3 group-hover:text-indigo transition-colors">AI-Powered Search</h3>
+                  <h3 className="text-lg font-bold text-text-primary mb-3 group-hover:text-indigo transition-colors">AI-Powered Search</h3>
                   <p className="text-text-secondary leading-relaxed">
                     Natural language search that understands your preferences and finds perfect matches using advanced AI algorithms and machine learning.
                   </p>
@@ -165,13 +165,13 @@ const Homepage = () => {
             
             {/* Feature 2 */}
             <div className="group relative">
-              <Card className="text-center p-6 hover:shadow-glow transition-all duration-700 border-0 bg-background/60 backdrop-blur-xl hover:scale-105 hover:-translate-y-2">
+              <Card className="text-center p-4 hover:shadow-glow transition-all duration-700 border-0 bg-background/60 backdrop-blur-xl hover:scale-105 hover:-translate-y-2">
                 <div className="absolute inset-0 bg-gradient-to-br from-emerald/5 to-success/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardContent className="pt-4 relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-br from-emerald to-success rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-success">
-                    <Badge className="w-8 h-8 text-text-white" />
+                <CardContent className="pt-2 relative z-10">
+                  <div className="w-12 h-12 bg-gradient-to-br from-emerald to-success rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-success">
+                    <Badge className="w-6 h-6 text-text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-text-primary mb-3 group-hover:text-emerald transition-colors">Verified Listings</h3>
+                  <h3 className="text-lg font-bold text-text-primary mb-3 group-hover:text-emerald transition-colors">Verified Listings</h3>
                   <p className="text-text-secondary leading-relaxed">
                     All properties are verified through our advanced AI-powered fraud detection and real-time verification system for your peace of mind.
                   </p>
@@ -182,13 +182,13 @@ const Homepage = () => {
             
             {/* Feature 3 */}
             <div className="group relative">
-              <Card className="text-center p-6 hover:shadow-glow transition-all duration-700 border-0 bg-background/60 backdrop-blur-xl hover:scale-105 hover:-translate-y-2">
+              <Card className="text-center p-4 hover:shadow-glow transition-all duration-700 border-0 bg-background/60 backdrop-blur-xl hover:scale-105 hover:-translate-y-2">
                 <div className="absolute inset-0 bg-gradient-to-br from-coral/5 to-rose/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardContent className="pt-4 relative z-10">
-                  <div className="w-16 h-16 bg-gradient-to-br from-coral to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-coral">
-                    <MessageCircle className="w-8 h-8 text-text-white" />
+                <CardContent className="pt-2 relative z-10">
+                  <div className="w-12 h-12 bg-gradient-to-br from-coral to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-coral">
+                    <MessageCircle className="w-6 h-6 text-text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-text-primary mb-3 group-hover:text-coral transition-colors">Smart Assistant</h3>
+                  <h3 className="text-lg font-bold text-text-primary mb-3 group-hover:text-coral transition-colors">Smart Assistant</h3>
                   <p className="text-text-secondary leading-relaxed">
                     Get instant help with property questions, translations, and personalized recommendations powered by our advanced AI assistant.
                   </p>
@@ -213,13 +213,13 @@ const Homepage = () => {
               <div className="inline-block px-3 py-1 bg-gradient-to-r from-coral/10 to-indigo/10 rounded-full text-coral font-semibold text-sm mb-3">
                 🏠 Featured Properties
               </div>
-              <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-3 leading-tight">
+              <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-3 leading-tight">
                 Handpicked
                 <span className="block bg-gradient-to-r from-coral via-indigo to-purple-600 bg-clip-text text-transparent">
                   Dream Homes
                 </span>
               </h2>
-              <p className="text-text-secondary text-lg flex items-center space-x-2">
+              <p className="text-text-secondary text-base flex items-center space-x-2">
                 <span>Curated especially for you</span>
                 <div className="flex space-x-1">
                   <span className="w-1.5 h-1.5 bg-coral rounded-full animate-pulse"></span>
@@ -230,11 +230,11 @@ const Homepage = () => {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-4 animate-scale-in">
-              <Button variant="outline" className="w-full sm:w-auto text-text-primary border-2 border-border hover:border-coral hover:bg-coral/5 shadow-soft hover:shadow-medium transition-all duration-300 px-8 py-3">
+              <Button variant="outline" className="w-full sm:w-auto text-text-primary border-2 border-border hover:border-coral hover:bg-coral/5 shadow-soft hover:shadow-medium transition-all duration-300 px-6 py-2">
                 <a href="/search" className="block w-full font-semibold">View All Properties</a>
               </Button>
               <a href="/list-property" className="w-full sm:w-auto">
-                <Button className="w-full sm:w-auto bg-gradient-to-r from-coral to-rose-600 text-text-white shadow-coral hover:shadow-glow transform hover:scale-105 transition-all duration-300 px-8 py-3 font-semibold">
+                <Button className="w-full sm:w-auto bg-gradient-to-r from-coral to-rose-600 text-text-white shadow-coral hover:shadow-glow transform hover:scale-105 transition-all duration-300 px-6 py-2 font-semibold">
                   Post Property
                 </Button>
               </a>
@@ -258,7 +258,7 @@ const Homepage = () => {
           {/* Recent Searches */}
           <div className="mt-12 pt-12 border-t border-border animate-fade-in">
             <div className="mb-8">
-              <h3 className="text-2xl font-bold text-text-primary mb-4">Trending Searches</h3>
+              <h3 className="text-lg font-bold text-text-primary mb-4">Trending Searches</h3>
               <div className="flex flex-wrap gap-3">
                 {['Rent in San Francisco', 'Apartments in Austin', 'Beachfront Miami', 'Downtown Loft NYC', 'Suburban Phoenix'].map((search) => (
                   <button
@@ -293,13 +293,13 @@ const Homepage = () => {
             <div className="inline-block px-3 py-1.5 bg-gradient-to-r from-coral/10 to-indigo/10 rounded-full text-coral font-semibold text-sm mb-4">
               🚀 Ready to Get Started?
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold text-text-primary mb-4 leading-tight">
+            <h2 className="text-3xl md:text-4xl font-bold text-text-primary mb-4 leading-tight">
               List Your
               <span className="block bg-gradient-to-r from-coral via-rose-600 to-purple-600 bg-clip-text text-transparent animate-gradient-shift bg-[length:200%_200%]">
                 Dream Property
               </span>
             </h2>
-            <p className="text-text-secondary text-lg md:text-xl mb-8 max-w-2xl mx-auto leading-relaxed font-light">
+            <p className="text-text-secondary text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed font-light">
               Join thousands of property owners who trust RentAI for hassle-free rentals 
               with <span className="font-semibold text-coral">AI-powered tenant matching</span>, 
               <span className="font-semibold text-indigo"> advanced fraud protection</span>, and 
@@ -311,7 +311,7 @@ const Homepage = () => {
             <a href="/list-property">
               <Button 
                 size="lg" 
-                className="min-w-[240px] bg-gradient-to-r from-coral to-rose-600 text-text-white shadow-coral hover:shadow-glow transform hover:scale-105 transition-all duration-500 px-8 py-4 text-lg font-semibold rounded-xl"
+                className="min-w-[200px] bg-gradient-to-r from-coral to-rose-600 text-text-white shadow-coral hover:shadow-glow transform hover:scale-105 transition-all duration-500 px-6 py-3 text-base font-semibold rounded-xl"
               >
                 List Your Property
               </Button>
@@ -319,7 +319,7 @@ const Homepage = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="min-w-[240px] border-2 border-text-primary/30 hover:border-coral hover:bg-coral/5 shadow-soft hover:shadow-medium transition-all duration-500 px-8 py-4 text-lg font-semibold rounded-xl"
+              className="min-w-[200px] border-2 border-text-primary/30 hover:border-coral hover:bg-coral/5 shadow-soft hover:shadow-medium transition-all duration-500 px-6 py-3 text-base font-semibold rounded-xl"
             >
               <a href="/insights" className="block w-full">Learn More</a>
             </Button>
@@ -328,18 +328,18 @@ const Homepage = () => {
           {/* Enhanced Stats Row */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 animate-slide-up">
             <div className="text-center group">
-              <div className="text-3xl font-bold bg-gradient-to-r from-coral to-rose-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">10K+</div>
-              <div className="text-text-secondary font-medium">Active Listings</div>
+              <div className="text-2xl font-bold bg-gradient-to-r from-coral to-rose-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">10K+</div>
+              <div className="text-text-secondary font-medium text-sm">Active Listings</div>
               <div className="w-12 h-1 bg-gradient-to-r from-coral to-rose-600 mx-auto mt-3 rounded-full group-hover:w-16 transition-all duration-300"></div>
             </div>
             <div className="text-center group">
-              <div className="text-3xl font-bold bg-gradient-to-r from-indigo to-purple-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">98%</div>
-              <div className="text-text-secondary font-medium">Success Rate</div>
+              <div className="text-2xl font-bold bg-gradient-to-r from-indigo to-purple-600 bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">98%</div>
+              <div className="text-text-secondary font-medium text-sm">Success Rate</div>
               <div className="w-12 h-1 bg-gradient-to-r from-indigo to-purple-600 mx-auto mt-3 rounded-full group-hover:w-16 transition-all duration-300"></div>
             </div>
             <div className="text-center group">
-              <div className="text-3xl font-bold bg-gradient-to-r from-emerald to-success bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">24/7</div>
-              <div className="text-text-secondary font-medium">AI Support</div>
+              <div className="text-2xl font-bold bg-gradient-to-r from-emerald to-success bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">24/7</div>
+              <div className="text-text-secondary font-medium text-sm">AI Support</div>
               <div className="w-12 h-1 bg-gradient-to-r from-emerald to-success mx-auto mt-3 rounded-full group-hover:w-16 transition-all duration-300"></div>
             </div>
           </div>

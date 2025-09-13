@@ -30,7 +30,7 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
           <img
             src={property.image}
             alt={property.title}
-            className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-700"
+            className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-700"
           />
           
           {/* Gradient overlay on hover */}
@@ -71,29 +71,29 @@ const PropertyCard: React.FC<PropertyCardProps> = ({ property }) => {
 
           {/* Price Tag - Enhanced */}
           <div className="absolute bottom-4 left-4 bg-gradient-to-r from-coral to-rose-600 text-text-white px-4 py-2 rounded-xl shadow-coral group-hover:shadow-glow transition-all duration-300">
-            <span className="font-black text-lg">{property.price}</span>
-            <span className="text-sm opacity-90 font-medium"> /night</span>
+            <span className="font-black text-base">{property.price}</span>
+            <span className="text-xs opacity-90 font-medium"> /night</span>
           </div>
         </div>
         
-        <CardContent className="p-6 space-y-4">
+        <CardContent className="p-4 space-y-3">
           <div className="space-y-2">
-            <h3 className="font-bold text-text-primary text-xl leading-tight group-hover:text-coral transition-colors duration-300">
+            <h3 className="font-bold text-text-primary text-lg leading-tight group-hover:text-coral transition-colors duration-300">
               {property.title}
             </h3>
-            <div className="flex items-center text-text-secondary text-base">
+            <div className="flex items-center text-text-secondary text-sm">
               <MapPin className="w-4 h-4 mr-2 flex-shrink-0 text-coral" />
               <span className="truncate font-medium">{property.location}</span>
             </div>
           </div>
           
-          <div className="flex items-center space-x-6 text-text-secondary text-base">
+          <div className="flex items-center space-x-4 text-text-secondary text-sm">
             <div className="flex items-center space-x-2 group/bed">
-              <Bed className="w-5 h-5 group-hover/bed:text-indigo transition-colors" />
+              <Bed className="w-4 h-4 group-hover/bed:text-indigo transition-colors" />
               <span className="font-semibold">{property.bedrooms} bed{property.bedrooms !== 1 ? 's' : ''}</span>
             </div>
             <div className="flex items-center space-x-2 group/bath">
-              <Bath className="w-5 h-5 group-hover/bath:text-indigo transition-colors" />
+              <Bath className="w-4 h-4 group-hover/bath:text-indigo transition-colors" />
               <span className="font-semibold">{property.bathrooms} bath{property.bathrooms !== 1 ? 's' : ''}</span>
             </div>
           </div>

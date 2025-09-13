@@ -14,26 +14,31 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter basename="/urbannest/">
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/search" element={<SearchResults />} />
-          <Route path="/property/:id" element={<PropertyDetails />} />
-          <Route path="/list-property" element={<ListProperty />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/insights" element={<Insights />} />
-          <Route path="/profile" element={<Profile />} />
-          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  // Use /urbannest/ for production (GitHub Pages), empty string for development
+  const basename = import.meta.env.PROD ? '/urbannest/' : '/';
+  
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter basename={basename}>
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/search" element={<SearchResults />} />
+            <Route path="/property/:id" element={<PropertyDetails />} />
+            <Route path="/list-property" element={<ListProperty />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/insights" element={<Insights />} />
+            <Route path="/profile" element={<Profile />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;

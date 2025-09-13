@@ -121,24 +121,24 @@ const AISearchBar = () => {
           <div className="flex items-center space-x-1">
             <button
               onClick={() => handleSearchModeChange('home')}
-              className={`flex flex-col items-center px-8 py-4 rounded-xl font-semibold transition-all duration-500 ${
+              className={`flex flex-col items-center px-4 py-2 rounded-xl font-semibold transition-all duration-500 ${
                 searchMode === 'home'
                   ? 'bg-gradient-to-r from-coral to-rose-600 text-text-white shadow-coral transform scale-105'
                   : 'text-text-secondary hover:text-text-primary hover:bg-surface-soft hover:scale-105'
               }`}
             >
-              <span className="text-lg font-bold">Home Rental</span>
+              <span className="text-xs font-bold">Home Rental</span>
               <span className="text-xs opacity-80 mt-1">Find long-term stays</span>
             </button>
             <button
               onClick={() => handleSearchModeChange('tourist')}
-              className={`flex flex-col items-center px-8 py-4 rounded-xl font-semibold transition-all duration-500 ${
+              className={`flex flex-col items-center px-4 py-2 rounded-xl font-semibold transition-all duration-500 ${
                 searchMode === 'tourist'
                   ? 'bg-gradient-to-r from-coral to-rose-600 text-text-white shadow-coral transform scale-105'
                   : 'text-text-secondary hover:text-text-primary hover:bg-surface-soft hover:scale-105'
               }`}
             >
-              <span className="text-lg font-bold">Tourist Stay</span>
+              <span className="text-xs font-bold">Tourist Stay</span>
               <span className="text-xs opacity-80 mt-1">Book nightly stays</span>
             </button>
           </div>
@@ -155,14 +155,14 @@ const AISearchBar = () => {
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold transition-all duration-500 ${
+                  className={`flex items-center space-x-2 px-4 py-2 rounded-lg font-semibold transition-all duration-500 ${
                     activeTab === tab.id
                       ? 'bg-gradient-to-r from-coral to-rose-600 text-text-white shadow-coral transform scale-105 animate-pulse-glow'
                       : 'text-text-secondary hover:text-text-primary hover:bg-surface-soft hover:scale-105'
                   }`}
                 >
                   <IconComponent className="w-4 h-4" />
-                  <span className="text-base">{tab.label}</span>
+                  <span className="text-xs">{tab.label}</span>
                 </button>
               );
             })}
@@ -183,18 +183,18 @@ const AISearchBar = () => {
           <div className="flex items-center">
             {/* Location Search - Enhanced */}
             <div
-              className={`flex-1 px-6 py-4 cursor-pointer rounded-xl transition-all duration-300 hover:bg-surface-soft/50 ${
+              className={`flex-1 px-4 py-3 cursor-pointer rounded-xl transition-all duration-300 hover:bg-surface-soft/50 ${
                 activeField === 'where' ? 'bg-gradient-to-r from-coral/10 to-indigo/10 shadow-medium' : ''
               }`}
               onClick={() => setActiveField(activeField === 'where' ? null : 'where')}
             >
               <div className="flex items-center space-x-3">
-                <div className="w-10 h-10 bg-gradient-to-r from-coral/20 to-indigo/20 rounded-lg flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-coral" />
+                <div className="w-8 h-8 bg-gradient-to-r from-coral/20 to-indigo/20 rounded-lg flex items-center justify-center">
+                  <MapPin className="w-4 h-4 text-coral" />
                 </div>
                 <div className="flex-1">
                   <div className="text-xs font-bold text-text-primary mb-1">Where</div>
-                  <div className="text-sm text-text-secondary font-medium">
+                  <div className="text-xs text-text-secondary font-medium">
                     {searchData.where || 'Search destinations'}
                   </div>
                 </div>
@@ -208,18 +208,18 @@ const AISearchBar = () => {
               <>
                 {/* Property Type - Enhanced */}
                 <div
-                  className={`flex-1 px-6 py-4 cursor-pointer rounded-xl transition-all duration-300 hover:bg-surface-soft/50 ${
+                  className={`flex-1 px-4 py-3 cursor-pointer rounded-xl transition-all duration-300 hover:bg-surface-soft/50 ${
                     activeField === 'propertyType' ? 'bg-gradient-to-r from-indigo/10 to-purple/10 shadow-medium' : ''
                   }`}
                   onClick={() => setActiveField(activeField === 'propertyType' ? null : 'propertyType')}
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-r from-indigo/20 to-purple/20 rounded-lg flex items-center justify-center">
-                      <Home className="w-5 h-5 text-indigo" />
+                    <div className="w-8 h-8 bg-gradient-to-r from-indigo/20 to-purple/20 rounded-lg flex items-center justify-center">
+                      <Home className="w-4 h-4 text-indigo" />
                     </div>
                     <div className="flex-1">
                       <div className="text-xs font-bold text-text-primary mb-1">Property Type</div>
-                      <div className="text-sm text-text-secondary font-medium">
+                      <div className="text-xs text-text-secondary font-medium">
                         {propertyTypes.find(pt => pt.value === searchData.propertyType)?.label || 'All Types'}
                       </div>
                     </div>
@@ -231,18 +231,18 @@ const AISearchBar = () => {
 
                 {/* Duration - Enhanced */}
                 <div
-                  className={`flex-1 px-6 py-4 cursor-pointer rounded-xl transition-all duration-300 hover:bg-surface-soft/50 ${
+                  className={`flex-1 px-4 py-3 cursor-pointer rounded-xl transition-all duration-300 hover:bg-surface-soft/50 ${
                     activeField === 'duration' ? 'bg-gradient-to-r from-purple/10 to-rose/10 shadow-medium' : ''
                   }`}
                   onClick={() => setActiveField(activeField === 'duration' ? null : 'duration')}
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-r from-purple/20 to-rose/20 rounded-lg flex items-center justify-center">
-                      <Clock className="w-5 h-5 text-purple" />
+                    <div className="w-8 h-8 bg-gradient-to-r from-purple/20 to-rose/20 rounded-lg flex items-center justify-center">
+                      <Clock className="w-4 h-4 text-purple" />
                     </div>
                     <div className="flex-1">
                       <div className="text-xs font-bold text-text-primary mb-1">Duration</div>
-                      <div className="text-sm text-text-secondary font-medium">
+                      <div className="text-xs text-text-secondary font-medium">
                         {durations.find(d => d.value === searchData.duration)?.label || '1 Year'}
                       </div>
                     </div>
@@ -254,18 +254,18 @@ const AISearchBar = () => {
 
                 {/* BHK - Enhanced */}
                 <div
-                  className={`flex-1 px-6 py-4 cursor-pointer rounded-xl transition-all duration-300 hover:bg-surface-soft/50 ${
+                  className={`flex-1 px-4 py-3 cursor-pointer rounded-xl transition-all duration-300 hover:bg-surface-soft/50 ${
                     activeField === 'bhk' ? 'bg-gradient-to-r from-rose/10 to-coral/10 shadow-medium' : ''
                   }`}
                   onClick={() => setActiveField(activeField === 'bhk' ? null : 'bhk')}
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-r from-rose/20 to-coral/20 rounded-lg flex items-center justify-center">
-                      <Bed className="w-5 h-5 text-rose-600" />
+                    <div className="w-8 h-8 bg-gradient-to-r from-rose/20 to-coral/20 rounded-lg flex items-center justify-center">
+                      <Bed className="w-4 h-4 text-rose-600" />
                     </div>
                     <div className="flex-1">
                       <div className="text-xs font-bold text-text-primary mb-1">BHK</div>
-                      <div className="text-sm text-text-secondary font-medium">
+                      <div className="text-xs text-text-secondary font-medium">
                         {bhkOptions.find(b => b.value === searchData.bhk)?.label || '1 BHK'}
                       </div>
                     </div>
@@ -279,17 +279,17 @@ const AISearchBar = () => {
                 <Popover open={activeField === 'checkIn'} onOpenChange={(open) => setActiveField(open ? 'checkIn' : null)}>
                   <PopoverTrigger asChild>
                     <div
-                      className={`flex-1 px-6 py-4 cursor-pointer rounded-xl transition-all duration-300 hover:bg-surface-soft/50 ${
+                      className={`flex-1 px-4 py-3 cursor-pointer rounded-xl transition-all duration-300 hover:bg-surface-soft/50 ${
                         activeField === 'checkIn' ? 'bg-gradient-to-r from-indigo/10 to-purple/10 shadow-medium' : ''
                       }`}
                     >
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-gradient-to-r from-indigo/20 to-purple/20 rounded-lg flex items-center justify-center">
-                          <Calendar className="w-5 h-5 text-indigo" />
+                        <div className="w-8 h-8 bg-gradient-to-r from-indigo/20 to-purple/20 rounded-lg flex items-center justify-center">
+                          <Calendar className="w-4 h-4 text-indigo" />
                         </div>
                         <div className="flex-1">
                           <div className="text-xs font-bold text-text-primary mb-1">Check in</div>
-                          <div className="text-sm text-text-secondary font-medium">
+                          <div className="text-xs text-text-secondary font-medium">
                             {searchData.checkIn ? format(searchData.checkIn, 'MMM dd') : 'Add dates'}
                           </div>
                         </div>
@@ -316,17 +316,17 @@ const AISearchBar = () => {
                 <Popover open={activeField === 'checkOut'} onOpenChange={(open) => setActiveField(open ? 'checkOut' : null)}>
                   <PopoverTrigger asChild>
                     <div
-                      className={`flex-1 px-6 py-4 cursor-pointer rounded-xl transition-all duration-300 hover:bg-surface-soft/50 ${
+                      className={`flex-1 px-4 py-3 cursor-pointer rounded-xl transition-all duration-300 hover:bg-surface-soft/50 ${
                         activeField === 'checkOut' ? 'bg-gradient-to-r from-purple/10 to-rose/10 shadow-medium' : ''
                       }`}
                     >
                       <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 bg-gradient-to-r from-purple/20 to-rose/20 rounded-lg flex items-center justify-center">
-                          <Calendar className="w-5 h-5 text-purple" />
+                        <div className="w-8 h-8 bg-gradient-to-r from-purple/20 to-rose/20 rounded-lg flex items-center justify-center">
+                          <Calendar className="w-4 h-4 text-purple" />
                         </div>
                         <div className="flex-1">
                           <div className="text-xs font-bold text-text-primary mb-1">Check out</div>
-                          <div className="text-sm text-text-secondary font-medium">
+                          <div className="text-xs text-text-secondary font-medium">
                             {searchData.checkOut ? format(searchData.checkOut, 'MMM dd') : 'Add dates'}
                           </div>
                         </div>
@@ -351,18 +351,18 @@ const AISearchBar = () => {
 
                 {/* Guests */}
                 <div
-                  className={`flex-1 px-6 py-4 cursor-pointer rounded-xl transition-all duration-300 hover:bg-surface-soft/50 ${
+                  className={`flex-1 px-4 py-3 cursor-pointer rounded-xl transition-all duration-300 hover:bg-surface-soft/50 ${
                     activeField === 'guests' ? 'bg-gradient-to-r from-rose/10 to-coral/10 shadow-medium' : ''
                   }`}
                   onClick={() => setActiveField(activeField === 'guests' ? null : 'guests')}
                 >
                   <div className="flex items-center space-x-3">
-                    <div className="w-10 h-10 bg-gradient-to-r from-rose/20 to-coral/20 rounded-lg flex items-center justify-center">
-                      <Users className="w-5 h-5 text-rose-600" />
+                    <div className="w-8 h-8 bg-gradient-to-r from-rose/20 to-coral/20 rounded-lg flex items-center justify-center">
+                      <Users className="w-4 h-4 text-rose-600" />
                     </div>
                     <div className="flex-1">
                       <div className="text-xs font-bold text-text-primary mb-1">Guests</div>
-                      <div className="text-sm text-text-secondary font-medium">
+                      <div className="text-xs text-text-secondary font-medium">
                         {searchData.guests} {searchData.guests === 1 ? 'guest' : 'guests'}
                       </div>
                     </div>
@@ -380,15 +380,15 @@ const AISearchBar = () => {
               onClick={() => setShowFilters(!showFilters)}
               className="mr-4 px-4 py-4 rounded-xl border-2 border-border hover:border-coral hover:bg-coral/5 transition-all duration-300"
             >
-              <Filter className="w-5 h-5 text-text-secondary" />
+              <Filter className="w-4 h-4 text-text-secondary" />
             </Button>
 
             {/* Search Button - Enhanced */}
             <Button
               onClick={handleSearch}
-              className="w-16 h-16 rounded-xl bg-gradient-to-r from-coral to-rose-600 hover:shadow-glow p-0 shadow-coral transform hover:scale-110 transition-all duration-500 group/btn"
+              className="w-12 h-12 rounded-xl bg-gradient-to-r from-coral to-rose-600 hover:shadow-glow p-0 shadow-coral transform hover:scale-110 transition-all duration-500 group/btn"
             >
-              <Search className="w-6 h-6 text-text-white group-hover/btn:rotate-12 transition-transform duration-300" />
+              <Search className="w-5 h-5 text-text-white group-hover/btn:rotate-12 transition-transform duration-300" />
             </Button>
           </div>
         </Card>
@@ -415,13 +415,13 @@ const AISearchBar = () => {
 
             {/* Popular Locations */}
             <div className="mt-4">
-              <h4 className="text-sm font-medium text-text-secondary mb-2">Popular destinations</h4>
+              <h4 className="text-xs font-medium text-text-secondary mb-2">Popular destinations</h4>
               <div className="flex flex-wrap gap-2">
                 {popularLocations.map((location) => (
                   <button
                     key={location}
                     onClick={() => handleLocationSelect(location)}
-                    className="px-3 py-2 text-sm bg-surface-soft hover:bg-coral/10 rounded-lg transition-colors duration-200"
+                    className="px-3 py-2 text-xs bg-surface-soft hover:bg-coral/10 rounded-lg transition-colors duration-200"
                   >
                     {location}
                   </button>
@@ -457,7 +457,7 @@ const AISearchBar = () => {
                 <Button
                   variant="outline"
                   onClick={() => setSearchData(prev => ({ ...prev, guests: Math.max(1, prev.guests - 1) }))}
-                  className="w-10 h-10 rounded-full"
+                  className="w-8 h-8 rounded-full"
                 >
                   -
                 </Button>
@@ -467,7 +467,7 @@ const AISearchBar = () => {
                 <Button
                   variant="outline"
                   onClick={() => setSearchData(prev => ({ ...prev, guests: prev.guests + 1 }))}
-                  className="w-10 h-10 rounded-full"
+                  className="w-8 h-8 rounded-full"
                 >
                   +
                 </Button>
@@ -511,7 +511,7 @@ const AISearchBar = () => {
                       : 'border-border hover:border-coral/50 hover:bg-coral/5'
                   }`}
                 >
-                  <div className="text-sm font-medium">{type.label}</div>
+                  <div className="text-xs font-medium">{type.label}</div>
                 </button>
               ))}
             </div>
@@ -553,7 +553,7 @@ const AISearchBar = () => {
                       : 'border-border hover:border-coral/50 hover:bg-coral/5'
                   }`}
                 >
-                  <div className="text-sm font-medium">{duration.label}</div>
+                  <div className="text-xs font-medium">{duration.label}</div>
                 </button>
               ))}
             </div>
@@ -595,7 +595,7 @@ const AISearchBar = () => {
                       : 'border-border hover:border-coral/50 hover:bg-coral/5'
                   }`}
                 >
-                  <div className="text-sm font-medium">{bhk.label}</div>
+                  <div className="text-xs font-medium">{bhk.label}</div>
                 </button>
               ))}
             </div>
@@ -625,7 +625,7 @@ const AISearchBar = () => {
             
             {/* Price Range */}
             <div>
-              <h4 className="text-sm font-medium text-text-secondary mb-3">Price Range (per month)</h4>
+              <h4 className="text-xs font-medium text-text-secondary mb-3">Price Range (per month)</h4>
               <div className="flex items-center space-x-4">
                 <input
                   type="number"
@@ -653,7 +653,7 @@ const AISearchBar = () => {
 
             {/* Amenities */}
             <div>
-              <h4 className="text-sm font-medium text-text-secondary mb-3">Amenities</h4>
+              <h4 className="text-xs font-medium text-text-secondary mb-3">Amenities</h4>
               <div className="grid grid-cols-3 gap-2">
                 {amenities.map((amenity) => (
                   <label key={amenity} className="flex items-center space-x-2 cursor-pointer">
@@ -675,7 +675,7 @@ const AISearchBar = () => {
                       }}
                       className="rounded border-border"
                     />
-                    <span className="text-sm text-text-secondary">{amenity}</span>
+                    <span className="text-xs text-text-secondary">{amenity}</span>
                   </label>
                 ))}
               </div>
