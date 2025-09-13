@@ -15,21 +15,16 @@ const EnhancedNavbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo Section */}
-          <div className="flex items-center space-x-6">
+        <div className="flex items-center h-16">
+          {/* Logo Section - Moved to far left */}
+          <div className="flex items-center space-x-6 flex-shrink-0">
             <div className="flex items-center space-x-2 group cursor-pointer">
               <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
                 <Home className="w-5 h-5 text-white" />
               </div>
-              <div className="flex flex-col leading-tight">
-                <span className="text-lg font-bold text-gray-800 group-hover:text-red-600 transition-colors duration-200">
-                  Urban
-                </span>
-                <span className="text-lg font-bold text-gray-800 group-hover:text-red-600 transition-colors duration-200">
-                  Nest
-                </span>
-              </div>
+              <span className="text-xl font-bold text-gray-800 group-hover:text-red-600 transition-colors duration-200">
+                Urban Nest
+              </span>
             </div>
 
             {/* Location Selector */}
@@ -43,8 +38,8 @@ const EnhancedNavbar = () => {
             </div>
           </div>
 
-          {/* Navigation Links */}
-          <div className="hidden lg:flex items-center space-x-8">
+          {/* Navigation Links - Centered */}
+          <div className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
             {navigationItems.map((item) => (
               <Link
                 key={item.label}
@@ -73,8 +68,8 @@ const EnhancedNavbar = () => {
             </Link>
           </div>
 
-          {/* Right Section */}
-          <div className="flex items-center space-x-4">
+          {/* Right Section - Moved to far right */}
+          <div className="flex items-center space-x-4 flex-shrink-0 ml-auto">
             {/* Post Property Button */}
             <Link to="/list-property">
               <Button 
