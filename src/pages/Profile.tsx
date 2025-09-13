@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Camera, Edit2, Mail, Phone, MapPin, Calendar, Settings, Heart, Key, Star, User, Shield, Bell } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -65,10 +66,10 @@ const Profile = () => {
       <div className="bg-background border-b border-border px-6 py-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
-            <a href="/dashboard" className="flex items-center text-text-secondary hover:text-text-primary transition-colors">
+            <Link to="/dashboard" className="flex items-center text-text-secondary hover:text-text-primary transition-colors">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Dashboard
-            </a>
+            </Link>
             
             <div className="flex items-center space-x-3">
               <Button
@@ -258,11 +259,11 @@ const Profile = () => {
                             <Button size="sm" variant="outline">
                               <Heart className="w-4 h-4 fill-current text-coral" />
                             </Button>
-                            <a href={`/property/${property.id}`}>
+                            <Link to={`/property/${property.id}`}>
                               <Button size="sm" className="bg-coral hover:bg-coral-hover text-text-white">
                                 View Details
                               </Button>
-                            </a>
+                            </Link>
                           </div>
                         </div>
                       </div>

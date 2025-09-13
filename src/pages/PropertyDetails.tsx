@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ArrowLeft, Heart, Share2, MapPin, Bed, Bath, Square, Wifi, Car, Waves, Dumbbell, Verified, Star, Calendar, MessageCircle, Phone, Flag } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -58,10 +59,10 @@ const PropertyDetails = () => {
       <div className="bg-background border-b border-border px-6 py-4">
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
-            <a href="/search" className="flex items-center text-text-secondary hover:text-text-primary transition-colors">
+            <Link to="/search" className="flex items-center text-text-secondary hover:text-text-primary transition-colors">
               <ArrowLeft className="w-4 h-4 mr-2" />
               Back to Search
-            </a>
+            </Link>
             
             <div className="flex items-center space-x-3">
               <Button
@@ -254,12 +255,12 @@ const PropertyDetails = () => {
                     <Phone className="w-4 h-4 mr-2" />
                     Contact Owner
                   </Button>
-                  <a href="/dashboard">
+                  <Link to="/dashboard">
                     <Button variant="outline" className="w-full border-indigo-start text-indigo-start hover:bg-indigo-light">
                       <Calendar className="w-4 h-4 mr-2" />
                       Save to Dashboard
                     </Button>
-                  </a>
+                  </Link>
                 </div>
               </CardContent>
             </Card>

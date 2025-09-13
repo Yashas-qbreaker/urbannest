@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { Filter, Map, List, ChevronDown, SlidersHorizontal, ArrowLeft } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -128,10 +129,10 @@ const SearchResults = () => {
         <div className="max-w-7xl mx-auto">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-4">
-              <a href="/" className="flex items-center text-text-secondary hover:text-text-primary transition-colors">
+              <Link to="/" className="flex items-center text-text-secondary hover:text-text-primary transition-colors">
                 <ArrowLeft className="w-4 h-4 mr-2" />
                 Back to Home
-              </a>
+              </Link>
               <div>
                 <h1 className="text-2xl font-bold text-text-primary">Search Results</h1>
                 <p className="text-text-secondary">
