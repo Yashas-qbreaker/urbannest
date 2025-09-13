@@ -133,7 +133,7 @@ const Homepage = () => {
         <div className="max-w-6xl mx-auto relative z-10">
           <div className="text-center mb-12">
             <div className="inline-block px-3 py-1.5 bg-coral/10 rounded-full text-coral font-semibold text-sm mb-3 animate-fade-in">
-              ✨ Why Choose RentAI?
+              ✨ Why Choose Urban Nest?
             </div>
             <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 leading-tight">
               The Future of
@@ -302,7 +302,7 @@ const Homepage = () => {
               </span>
             </h2>
             <p className="text-text-secondary text-base md:text-lg mb-8 max-w-2xl mx-auto leading-relaxed font-light">
-              Join thousands of property owners who trust RentAI for hassle-free rentals 
+              Join thousands of property owners who trust Urban Nest for hassle-free rentals 
               with <span className="font-semibold text-coral">AI-powered tenant matching</span>, 
               <span className="font-semibold text-indigo"> advanced fraud protection</span>, and 
               <span className="font-semibold text-purple-600"> instant insights</span>.

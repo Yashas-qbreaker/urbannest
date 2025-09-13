@@ -23,14 +23,14 @@ const EnhancedNavbar = () => {
                 <Home className="w-5 h-5 text-text-white" />
               </div>
               <span className="text-xl font-bold bg-gradient-to-r from-coral via-rose-600 to-purple-600 bg-clip-text text-transparent">
-                rentai
+                Urban Nest
               </span>
             </div>
 
             {/* Location Selector - Balanced */}
             <div className="hidden md:flex items-center space-x-2 px-4 py-2 bg-gradient-to-r from-surface-soft/50 to-surface-soft/30 rounded-xl hover:bg-gradient-to-r hover:from-coral/10 hover:to-indigo/10 transition-all duration-300 cursor-pointer group border border-border/20">
               <MapPin className="w-4 h-4 text-coral group-hover:scale-110 transition-transform duration-300" />
-              <span className="text-sm font-semibold text-text-primary">Rent in San Francisco</span>
+              <span className="text-sm font-semibold text-text-primary">Rent in Bengaluru</span>
               <ChevronDown className="w-4 h-4 text-text-secondary group-hover:rotate-180 transition-transform duration-300" />
             </div>
           </div>
