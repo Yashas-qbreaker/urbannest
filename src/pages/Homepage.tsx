@@ -123,80 +123,63 @@ const Homepage = () => {
         </div>
       </div>
 
-      {/* Features Section - Enhanced */}
-      <div className="py-20 px-4 sm:px-6 relative overflow-hidden">
-        {/* Background with animated elements */}
-        <div className="absolute inset-0 bg-gradient-to-br from-surface-soft via-background to-surface-soft/50"></div>
-        <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-coral/50 to-transparent"></div>
-        <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-indigo/50 to-transparent"></div>
-        
-        <div className="max-w-6xl mx-auto relative z-10">
-          <div className="text-center mb-12">
-            <div className="inline-block px-3 py-1.5 bg-coral/10 rounded-full text-coral font-semibold text-sm mb-3 animate-fade-in">
-              ✨ Why Choose Urban Nest?
+      {/* Features Section - Clean & Modern */}
+      <div className="py-24 px-4 sm:px-6 bg-white">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-pink-100 rounded-full text-pink-600 font-medium text-sm mb-6">
+              <span className="mr-2">⭐</span>
+              Why Choose Urban Nest?
             </div>
-            <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
               The Future of
-              <span className="block bg-gradient-to-r from-coral via-indigo to-purple-600 bg-clip-text text-transparent">
+              <span className="block text-pink-600">
                 Rental Search
               </span>
             </h2>
-            <p className="text-text-secondary text-base max-w-2xl mx-auto leading-relaxed font-light">
+            <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
               Experience the next generation of rental search with AI-powered insights, 
               verified listings, and intelligent matching technology.
             </p>
           </div>
           
-          <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
-            {/* Feature 1 */}
-            <div className="group relative">
-              <Card className="text-center p-4 hover:shadow-glow transition-all duration-700 border-0 bg-background/60 backdrop-blur-xl hover:scale-105 hover:-translate-y-2">
-                <div className="absolute inset-0 bg-gradient-to-br from-indigo/5 to-purple/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardContent className="pt-2 relative z-10">
-                  <div className="w-12 h-12 bg-gradient-to-br from-indigo to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-indigo">
-                    <Search className="w-6 h-6 text-text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-text-primary mb-3 group-hover:text-indigo transition-colors">AI-Powered Search</h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    Natural language search that understands your preferences and finds perfect matches using advanced AI algorithms and machine learning.
-                  </p>
-                  <div className="mt-3 w-12 h-1 bg-gradient-to-r from-indigo to-purple-600 mx-auto rounded-full group-hover:w-20 transition-all duration-500"></div>
-                </CardContent>
-              </Card>
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Feature 1 - AI-Powered Search */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-purple-100 to-purple-200 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <Search className="w-8 h-8 text-purple-600" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">AI-Powered Search</h3>
+              <p className="text-gray-600 leading-relaxed text-center">
+                Natural language search that understands your preferences and finds perfect matches using advanced AI algorithms and machine learning.
+              </p>
             </div>
             
-            {/* Feature 2 */}
-            <div className="group relative">
-              <Card className="text-center p-4 hover:shadow-glow transition-all duration-700 border-0 bg-background/60 backdrop-blur-xl hover:scale-105 hover:-translate-y-2">
-                <div className="absolute inset-0 bg-gradient-to-br from-emerald/5 to-success/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardContent className="pt-2 relative z-10">
-                  <div className="w-12 h-12 bg-gradient-to-br from-emerald to-success rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-success">
-                    <Badge className="w-6 h-6 text-text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-text-primary mb-3 group-hover:text-emerald transition-colors">Verified Listings</h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    All properties are verified through our advanced AI-powered fraud detection and real-time verification system for your peace of mind.
-                  </p>
-                  <div className="mt-3 w-12 h-1 bg-gradient-to-r from-emerald to-success mx-auto rounded-full group-hover:w-20 transition-all duration-500"></div>
-                </CardContent>
-              </Card>
+            {/* Feature 2 - Verified Listings */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-100 to-pink-200 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                  <div className="w-4 h-4 bg-white rounded-full"></div>
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Verified Listings</h3>
+              <p className="text-gray-600 leading-relaxed text-center">
+                All properties are verified through our advanced AI-powered fraud detection and real-time verification system for your peace of mind.
+              </p>
             </div>
             
-            {/* Feature 3 */}
-            <div className="group relative">
-              <Card className="text-center p-4 hover:shadow-glow transition-all duration-700 border-0 bg-background/60 backdrop-blur-xl hover:scale-105 hover:-translate-y-2">
-                <div className="absolute inset-0 bg-gradient-to-br from-coral/5 to-rose/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                <CardContent className="pt-2 relative z-10">
-                  <div className="w-12 h-12 bg-gradient-to-br from-coral to-rose-600 rounded-2xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 group-hover:rotate-3 transition-all duration-500 shadow-coral">
-                    <MessageCircle className="w-6 h-6 text-text-white" />
-                  </div>
-                  <h3 className="text-lg font-bold text-text-primary mb-3 group-hover:text-coral transition-colors">Smart Assistant</h3>
-                  <p className="text-text-secondary leading-relaxed">
-                    Get instant help with property questions, translations, and personalized recommendations powered by our advanced AI assistant.
-                  </p>
-                  <div className="mt-3 w-12 h-1 bg-gradient-to-r from-coral to-rose-600 mx-auto rounded-full group-hover:w-20 transition-all duration-500"></div>
-                </CardContent>
-              </Card>
+            {/* Feature 3 - Smart Assistant */}
+            <div className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300">
+              <div className="w-16 h-16 bg-gradient-to-br from-pink-100 to-pink-200 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <div className="w-8 h-8 bg-red-500 rounded-lg flex items-center justify-center">
+                  <MessageCircle className="w-5 h-5 text-white" />
+                </div>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Smart Assistant</h3>
+              <p className="text-gray-600 leading-relaxed text-center">
+                Get instant help with property questions, translations, and personalized recommendations powered by our advanced AI assistant.
+              </p>
+              <div className="mt-6 w-12 h-1 bg-red-500 mx-auto rounded-full"></div>
             </div>
           </div>
         </div>

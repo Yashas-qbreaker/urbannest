@@ -15,9 +15,9 @@ const EnhancedNavbar = () => {
   return (
     <nav className="sticky top-0 z-50 bg-white/95 backdrop-blur-xl border-b border-gray-200 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center h-16">
-          {/* Logo Section - Moved to far left */}
-          <div className="flex items-center space-x-6 flex-shrink-0">
+        <div className="flex items-center justify-between h-16">
+          {/* Logo Section */}
+          <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2 group cursor-pointer">
               <div className="w-8 h-8 bg-gradient-to-r from-red-500 to-pink-600 rounded-lg flex items-center justify-center group-hover:scale-105 transition-transform duration-200">
                 <Home className="w-5 h-5 text-white" />
@@ -38,28 +38,22 @@ const EnhancedNavbar = () => {
             </div>
           </div>
 
-          {/* Navigation Links - Centered */}
-          <div className="hidden lg:flex items-center space-x-8 flex-1 justify-center">
+          {/* Navigation Links - Single Line */}
+          <div className="hidden lg:flex items-center space-x-6">
             {navigationItems.map((item) => (
               <Link
                 key={item.label}
                 to={item.href}
-                className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors duration-200 relative group"
+                className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors duration-200 whitespace-nowrap"
               >
                 {item.label}
-                <div className="absolute -bottom-8 left-1/2 transform -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-200 pointer-events-none">
-                  <div className="bg-gray-800 text-white px-3 py-1 rounded-md text-xs whitespace-nowrap">
-                    {item.description}
-                  </div>
-                  <div className="w-2 h-2 bg-gray-800 transform rotate-45 absolute -top-1 left-1/2 -translate-x-1/2"></div>
-                </div>
               </Link>
             ))}
             
             {/* Insights with NEW badge */}
             <Link
               to="/insights"
-              className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors duration-200 flex items-center space-x-2 relative group"
+              className="text-sm font-medium text-gray-600 hover:text-red-600 transition-colors duration-200 flex items-center space-x-2 whitespace-nowrap"
             >
               <span>Insights</span>
               <Badge className="bg-pink-500 text-white text-xs px-2 py-0.5 rounded-full">
@@ -68,8 +62,8 @@ const EnhancedNavbar = () => {
             </Link>
           </div>
 
-          {/* Right Section - Moved to far right */}
-          <div className="flex items-center space-x-4 flex-shrink-0 ml-auto">
+          {/* Right Section */}
+          <div className="flex items-center space-x-4">
             {/* Post Property Button */}
             <Link to="/list-property">
               <Button 
@@ -105,19 +99,19 @@ const EnhancedNavbar = () => {
 
         {/* Mobile Menu */}
         <div className="lg:hidden border-t border-gray-200 mt-2 pt-2 pb-2">
-          <div className="flex flex-wrap gap-2">
-            {navigationItems.slice(0, 2).map((item) => (
+          <div className="flex items-center space-x-4 overflow-x-auto">
+            {navigationItems.map((item) => (
               <Link
                 key={item.label}
                 to={item.href}
-                className="px-3 py-1 text-sm text-gray-600 hover:text-red-600 bg-gray-50 rounded-full transition-colors duration-200"
+                className="px-3 py-1 text-sm text-gray-600 hover:text-red-600 bg-gray-50 rounded-full transition-colors duration-200 whitespace-nowrap flex-shrink-0"
               >
                 {item.label}
               </Link>
             ))}
             <Link
               to="/insights"
-              className="flex items-center space-x-1 px-3 py-1 text-sm text-gray-600 hover:text-red-600 bg-gray-50 rounded-full transition-colors duration-200"
+              className="flex items-center space-x-1 px-3 py-1 text-sm text-gray-600 hover:text-red-600 bg-gray-50 rounded-full transition-colors duration-200 whitespace-nowrap flex-shrink-0"
             >
               <span>Insights</span>
               <Badge className="bg-pink-500 text-white text-xs px-1.5 py-0.5 rounded-full">NEW</Badge>
