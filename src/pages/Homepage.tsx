@@ -18,8 +18,8 @@ const Homepage = () => {
     {
       id: 1,
       title: "Modern Downtown Loft",
-      location: "San Francisco, CA",
-      price: "$420",
+      location: "Bengaluru, Karnataka",
+      price: "₹35,000",
       bedrooms: 2,
       bathrooms: 2,
       verified: true,
@@ -29,8 +29,8 @@ const Homepage = () => {
     {
       id: 2,
       title: "Cozy Garden Apartment",
-      location: "Austin, TX",
-      price: "$280",
+      location: "Mysore, Karnataka",
+      price: "₹22,000",
       bedrooms: 1,
       bathrooms: 1,
       verified: true,
@@ -40,8 +40,8 @@ const Homepage = () => {
     {
       id: 3,
       title: "Luxury Beachfront Condo",
-      location: "Miami Beach, FL",
-      price: "$650",
+      location: "Mumbai, Maharashtra",
+      price: "₹55,000",
       bedrooms: 3,
       bathrooms: 3,
       verified: true,
@@ -262,7 +262,7 @@ const Homepage = () => {
             <div className="mb-8">
               <h3 className="text-lg font-bold text-text-primary mb-4">Trending Searches</h3>
               <div className="flex flex-wrap gap-3">
-                {['Rent in San Francisco', 'Apartments in Austin', 'Beachfront Miami', 'Downtown Loft NYC', 'Suburban Phoenix'].map((search) => (
+                {['Rent in Bengaluru', 'Apartments in Mysore', 'Beachfront Mumbai', 'Downtown Delhi', 'Suburban Pune'].map((search) => (
                   <button
                     key={search}
                     onClick={() => {

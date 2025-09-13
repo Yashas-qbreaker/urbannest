@@ -17,7 +17,7 @@ const Profile = () => {
     name: 'John Smith',
     email: 'john.smith@email.com',
     phone: '+1 (555) 123-4567',
-    location: 'San Francisco, CA',
+    location: 'Bengaluru, Karnataka',
     joinDate: 'March 2024',
     avatar: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
   });
@@ -33,16 +33,16 @@ const Profile = () => {
     {
       id: 1,
       title: "Modern Downtown Loft",
-      location: "San Francisco, CA",
-      price: "$4,200",
+      location: "Bengaluru, Karnataka",
+      price: "₹35,000",
       image: "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=400&h=300&fit=crop",
       savedDate: "2024-01-15"
     },
     {
       id: 2,
       title: "Cozy Garden Apartment",
-      location: "Austin, TX",
-      price: "$2,800",
+      location: "Mysore, Karnataka",
+      price: "₹22,000",
       image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
       savedDate: "2024-01-12"
     }
@@ -50,8 +50,8 @@ const Profile = () => {
 
   const recentSearches = [
     "2 bedroom apartments in SF",
-    "Pet-friendly rentals Austin",
-    "Luxury condos Miami Beach",
+    "Pet-friendly rentals Mysore",
+    "Luxury condos Mumbai",
     "Student housing near campus"
   ];
 

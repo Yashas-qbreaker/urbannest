@@ -12,7 +12,7 @@ import FloatingChatbot from '@/components/FloatingChatbot';
 const SearchResults = () => {
   const [viewMode, setViewMode] = useState<'list' | 'map'>('list');
   const [showFilters, setShowFilters] = useState(false); // Start with false for mobile
-  const [priceRange, setPriceRange] = useState([0, 5000]);
+  const [priceRange, setPriceRange] = useState([0, 50000]);
   const [verifiedOnly, setVerifiedOnly] = useState(false);
   const [searchParams, setSearchParams] = useState({
     location: '',
@@ -37,8 +37,8 @@ const SearchResults = () => {
     {
       id: 1,
       title: "Modern Downtown Loft",
-      location: "San Francisco, CA",
-      price: "$420",
+      location: "Bengaluru, Karnataka",
+      price: "₹35,000",
       bedrooms: 2,
       bathrooms: 2,
       verified: true,
@@ -48,8 +48,8 @@ const SearchResults = () => {
     {
       id: 2,
       title: "Cozy Garden Apartment",
-      location: "Austin, TX",
-      price: "$280",
+      location: "Mysore, Karnataka",
+      price: "₹22,000",
       bedrooms: 1,
       bathrooms: 1,
       verified: true,
@@ -59,8 +59,8 @@ const SearchResults = () => {
     {
       id: 3,
       title: "Spacious Family Home",
-      location: "Denver, CO",
-      price: "$350",
+      location: "Chennai, Tamil Nadu",
+      price: "₹28,000",
       bedrooms: 3,
       bathrooms: 2,
       verified: false,
@@ -70,8 +70,8 @@ const SearchResults = () => {
     {
       id: 4,
       title: "Luxury Beachfront Condo",
-      location: "Miami Beach, FL",
-      price: "$650",
+      location: "Mumbai, Maharashtra",
+      price: "₹55,000",
       bedrooms: 3,
       bathrooms: 3,
       verified: true,
@@ -81,8 +81,8 @@ const SearchResults = () => {
     {
       id: 5,
       title: "Urban Studio Apartment",
-      location: "New York, NY",
-      price: "$320",
+      location: "Delhi, NCR",
+      price: "₹25,000",
       bedrooms: 0,
       bathrooms: 1,
       verified: true,
@@ -92,8 +92,8 @@ const SearchResults = () => {
     {
       id: 6,
       title: "Suburban Townhouse",
-      location: "Seattle, WA",
-      price: "$290",
+      location: "Hyderabad, Telangana",
+      price: "₹23,000",
       bedrooms: 2,
       bathrooms: 2,
       verified: true,
@@ -106,7 +106,7 @@ const SearchResults = () => {
   const filteredProperties = properties.filter(property => {
     if (verifiedOnly && !property.verified) return false;
     if (searchParams.location && !property.location.toLowerCase().includes(searchParams.location.toLowerCase())) return false;
-    const price = parseInt(property.price.replace('$', '').replace(',', ''));
+    const price = parseInt(property.price.replace('₹', '').replace(',', ''));
     if (price < priceRange[0] || price > priceRange[1]) return false;
     return true;
   });
@@ -199,13 +199,13 @@ const SearchResults = () => {
                       <Slider
                         value={priceRange}
                         onValueChange={setPriceRange}
-                        max={10000}
+                        max={100000}
                         step={100}
                         className="mb-3 accent-coral"
                       />
                       <div className="flex items-center justify-between text-sm text-text-secondary">
-                        <span>${priceRange[0]}</span>
-                        <span>${priceRange[1]}+</span>
+                        <span>₹{priceRange[0]}</span>
+                        <span>₹{priceRange[1]}+</span>
                       </div>
                     </div>
 
@@ -248,13 +248,13 @@ const SearchResults = () => {
                 <Slider
                   value={priceRange}
                   onValueChange={setPriceRange}
-                  max={10000}
+                  max={100000}
                   step={100}
                   className="mb-3 accent-coral"
                 />
                 <div className="flex items-center justify-between text-sm text-text-secondary">
-                  <span>${priceRange[0]}</span>
-                  <span>${priceRange[1]}+</span>
+                  <span>₹{priceRange[0]}</span>
+                  <span>₹{priceRange[1]}+</span>
                 </div>
               </div>
 

@@ -15,8 +15,8 @@ const PropertyDetails = () => {
   const property = {
     id: 1,
     title: "Modern Downtown Loft with City Views",
-    location: "123 Main Street, San Francisco, CA 94102",
-    price: "$4,200",
+    location: "123 MG Road, Bengaluru, Karnataka 560001",
+    price: "₹35,000",
     bedrooms: 2,
     bathrooms: 2,
     sqft: 1200,

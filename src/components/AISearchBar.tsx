@@ -22,7 +22,7 @@ const AISearchBar = () => {
     checkIn: null as Date | null,
     checkOut: null as Date | null,
     guests: 1,
-    priceRange: { min: 0, max: 10000 },
+    priceRange: { min: 0, max: 100000 },
     amenities: [] as string[]
   });
 
@@ -34,14 +34,14 @@ const AISearchBar = () => {
   ];
 
   const popularLocations = [
-    'San Francisco, CA',
-    'New York, NY',
-    'Los Angeles, CA',
-    'Austin, TX',
-    'Miami, FL',
-    'Seattle, WA',
-    'Boston, MA',
-    'Denver, CO'
+    'Bengaluru, Karnataka',
+    'Mysore, Karnataka',
+    'Mumbai, Maharashtra',
+    'Delhi, NCR',
+    'Chennai, Tamil Nadu',
+    'Hyderabad, Telangana',
+    'Pune, Maharashtra',
+    'Kochi, Kerala'
   ];
 
   const propertyTypes = [
@@ -82,7 +82,7 @@ const AISearchBar = () => {
     // Common parameters
     if (searchData.where) queryParams.set('location', searchData.where);
     if (searchData.priceRange.min > 0) queryParams.set('minPrice', searchData.priceRange.min.toString());
-    if (searchData.priceRange.max < 10000) queryParams.set('maxPrice', searchData.priceRange.max.toString());
+    if (searchData.priceRange.max < 100000) queryParams.set('maxPrice', searchData.priceRange.max.toString());
     if (searchData.amenities.length > 0) queryParams.set('amenities', searchData.amenities.join(','));
     
     // Mode-specific parameters
@@ -627,7 +627,7 @@ const AISearchBar = () => {
             
             {/* Price Range */}
             <div>
-              <h4 className="text-xs font-medium text-text-secondary mb-3">Price Range (per month)</h4>
+              <h4 className="text-xs font-medium text-text-secondary mb-3">Price Range (₹ per month)</h4>
               <div className="flex items-center space-x-4">
                 <input
                   type="number"
@@ -646,7 +646,7 @@ const AISearchBar = () => {
                   value={searchData.priceRange.max || ''}
                   onChange={(e) => setSearchData(prev => ({ 
                     ...prev, 
-                    priceRange: { ...prev.priceRange, max: parseInt(e.target.value) || 10000 }
+                    priceRange: { ...prev.priceRange, max: parseInt(e.target.value) || 100000 }
                   }))}
                   className="w-24 px-3 py-2 border border-border rounded-lg focus:ring-2 focus:ring-coral focus:border-coral outline-none"
                 />
